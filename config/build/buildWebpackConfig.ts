@@ -18,7 +18,7 @@ export function buildWebpackConfig(
             clean: true,
         },
         plugins: buildPlugins(options),
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         module: { rules: buildLoaders(isDev) },
         devtool: isDev ? "inline-source-map" : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
