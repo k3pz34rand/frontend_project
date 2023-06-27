@@ -3,11 +3,12 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { ClassNames } from 'shared/lib/helpers/ClassNames';
 import { NavBar } from 'widgets/navBar';
 import { Sidebar } from 'widgets/Sidebar';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { AppRouter } from './providers/router';
 
 export function App() {
     const { theme } = useTheme();
+
     return (
         <div className={ClassNames('app', {}, [theme])}>
             <Suspense fallback="">
