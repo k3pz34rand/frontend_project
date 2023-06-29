@@ -1,4 +1,4 @@
-import { ClassNames } from './ClassNames';
+import { ClassNames } from 'shared/lib/helpers/ClassNames';
 
 describe('ClassNames', () => {
     test('Classname with cls', () => {

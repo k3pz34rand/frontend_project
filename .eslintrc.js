@@ -39,11 +39,23 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
             'error',
-            { markupOnly: true, ignoreAttribute: ['to'], ignore: ['Toggle'] },
+            {
+                markupOnly: true,
+                ignoreAttribute: ['to', 'data-testid'],
+                ignore: ['Toggle'],
+            },
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
         'comma-dangle': ['error', 'only-multiline'],
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{tsx,ts}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
     globals: {
         __IS_DEV__: true,
     },

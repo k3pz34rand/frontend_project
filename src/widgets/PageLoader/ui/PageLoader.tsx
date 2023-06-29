@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/helpers/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import { Loader } from 'shared/ui/Loader/Loader';
 import cls from './PageLoader.module.scss';
 

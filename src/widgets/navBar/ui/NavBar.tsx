@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/helpers/ClassNames';
+import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
 import cls from './NavBar.module.scss';
