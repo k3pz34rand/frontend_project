@@ -11,7 +11,7 @@ const meta: Meta<typeof AboutPage> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof AppLink>;
+type Story = StoryObj<typeof AboutPage>;
 
 export const Ligth: Story = {
     args: {},

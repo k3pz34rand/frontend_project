@@ -11,7 +11,7 @@ const meta: Meta<typeof NotFoundPage> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof AppLink>;
+type Story = StoryObj<typeof NotFoundPage>;
 
 export const Ligth: Story = {
     args: { className: '' },
