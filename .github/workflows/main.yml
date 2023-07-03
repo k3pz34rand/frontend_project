@@ -10,7 +10,7 @@ jobs:
             matrix:
                 os: [ubuntu-latest]
                 node: [17.x]
-        runs-on: ${{ matrix.os }}
+        runs-on: ubuntu-lates
         steps:
           - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
             - name: Checkout
