@@ -5,24 +5,27 @@ on:
     pull_request:
         branches: [master]
 jobs:
-  pipeline:
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [17.x]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Setup Node.js ${{ matrix.node }}
-      uses: actions/setup-node@v1.4.3
-      with:
-        node-version: ${{ matrix.node }}
-      - name: Install dependencies
-      run: npm install
-      - name: build project prod
-      run: npm run build:prod
-      - name: linting typescript
-      run: npm run lint:ts
-      - name: linting scss
-      run: npm run lint:scss
-      - name: unit test
-      run: npm run test:unit
+    pipeline:
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+                node: [17.x]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Setup node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16.13.x
+                  cache: npm
+            - name: Install dependencies
+              run: npm install
+            - name: build project prod
+              run: npm run build:prod
+            - name: linting typescript
+              run: npm run lint:ts
+            - name: linting scss
+              run: npm run lint:scss
+            - name: unit test
+              run: npm run test:unit
