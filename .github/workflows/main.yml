@@ -12,6 +12,7 @@ jobs:
                 node: [17.x]
         runs-on: ${{ matrix.os }}
         steps:
+          - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
             - name: Checkout
               uses: actions/checkout@v3
             - name: Setup node
