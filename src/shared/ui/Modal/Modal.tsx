@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import { Portal } from 'shared/ui/Portal/Portal';
+import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
@@ -23,6 +24,7 @@ export const Modal = (props: ModalProps) => {
         className, children, isOpen, onClose
     } = props;
 
+    const { theme } = useTheme();
     const [isClosing, setIsClosing] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -63,10 +65,9 @@ export const Modal = (props: ModalProps) => {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
-    const node = document.getElementById('my_app');
     return (
-        <Portal element={node}>
-            <div className={ClassNames(cls.Modal, mods, [className])}>
+        <Portal>
+            <div className={ClassNames(cls.Modal, mods, [className, theme])}>
                 <div
                     className={cls.overlay}
                     onClick={closeHandler}

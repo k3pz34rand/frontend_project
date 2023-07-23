@@ -87,14 +87,21 @@ export const OutlineDarkSizeXL: Story = {
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const BackgroundThem: Story = {
+export const BackgroundThemLigth: Story = {
+    args: {
+        children: 'text',
+        theme: ThemeButton.BACKGROUND,
+    },
+    decorators: [ThemeDecorator(Theme.LIGTH)],
+};
+
+export const BackgroundThemDark: Story = {
     args: {
         children: 'text',
         theme: ThemeButton.BACKGROUND,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-
 export const InvertedBackgroundThemLigth: Story = {
     args: {
         children: 'text',
@@ -114,7 +121,7 @@ export const InvertedBackgroundThemDark: Story = {
 export const SquareButtonSizeM: Story = {
     args: {
         children: '>',
-        theme: ThemeButton.BACKGROUND,
+        theme: ThemeButton.BACKGROUND_INVERTED,
         square: true,
         size: ButtonSize.M,
     },
@@ -124,7 +131,7 @@ export const SquareButtonSizeM: Story = {
 export const SquareButtonSizeL: Story = {
     args: {
         children: '>',
-        theme: ThemeButton.BACKGROUND,
+        theme: ThemeButton.BACKGROUND_INVERTED,
         square: true,
         size: ButtonSize.L,
     },
@@ -134,7 +141,7 @@ export const SquareButtonSizeL: Story = {
 export const SquareButtonSizeXL: Story = {
     args: {
         children: '>',
-        theme: ThemeButton.BACKGROUND,
+        theme: ThemeButton.BACKGROUND_INVERTED,
         square: true,
         size: ButtonSize.XL,
     },

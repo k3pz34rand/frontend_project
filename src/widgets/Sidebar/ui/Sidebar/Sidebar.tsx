@@ -38,7 +38,7 @@ export function Sidebar({ className }: SidebarProps) {
                 <AppLink
                     to={RoutePath.main}
                     className={cls.item}
-                    theme={AppLinkTheme.SECONDARY}
+                    theme={AppLinkTheme.INVERTED}
                 >
                     <MainIcon className={cls.icon} />
                     <span className={cls.link}>{t('Главная страница')}</span>
@@ -46,7 +46,7 @@ export function Sidebar({ className }: SidebarProps) {
                 <AppLink
                     className={cls.item}
                     to={RoutePath.about}
-                    theme={AppLinkTheme.SECONDARY}
+                    theme={AppLinkTheme.INVERTED}
                 >
                     <AboutIcon className={cls.icon} />
                     <span className={cls.link}>{t('О сайте')}</span>

@@ -22,12 +22,12 @@ export const LigthPrimary: Story = {
     },
     decorators: [ThemeDecorator(Theme.LIGTH)],
 };
-export const LigthSecondary: Story = {
+export const LigthInverted: Story = {
     args: {
         className: '',
         children: 'link',
         to: '/',
-        theme: AppLinkTheme.SECONDARY,
+        theme: AppLinkTheme.INVERTED,
     },
     decorators: [ThemeDecorator(Theme.LIGTH)],
 };
@@ -40,12 +40,12 @@ export const DarkPrimary: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
-export const DarkSecondary: Story = {
+export const DarkInverted: Story = {
     args: {
         className: '',
         children: 'link',
         to: '/',
-        theme: AppLinkTheme.SECONDARY,
+        theme: AppLinkTheme.INVERTED,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };

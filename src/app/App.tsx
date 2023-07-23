@@ -9,10 +9,7 @@ export function App() {
     const { theme } = useTheme();
 
     return (
-        <div
-            className={ClassNames('app', {}, [theme])}
-            id="my_app"
-        >
+        <div className={ClassNames('app', {}, [theme])}>
             <Suspense fallback="">
                 <NavBar />
                 <div className="content-page">
