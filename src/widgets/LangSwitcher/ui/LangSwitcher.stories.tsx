@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { LangDecorator } from 'shared/config/storybook/langDecorator/LangDecorator';
 import { LangSwitcher } from './LangSwitcher';
 
 const meta: Meta<typeof LangSwitcher> = {
@@ -9,7 +8,7 @@ const meta: Meta<typeof LangSwitcher> = {
     component: LangSwitcher,
     tags: ['autodocs'],
     argTypes: {},
-    decorators: [LangDecorator],
+    decorators: [],
 };
 export default meta;
 
