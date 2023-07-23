@@ -1,1 +1,4 @@
-{}
+{
+  "increment": "increment",
+  "decrement": "decrement"
+}
