@@ -1,4 +1,5 @@
 {
-  "increment": "increment",
-  "decrement": "decrement"
+    "increment": "increment",
+    "decrement": "decrement",
+    "Войти": "Enter"
 }
