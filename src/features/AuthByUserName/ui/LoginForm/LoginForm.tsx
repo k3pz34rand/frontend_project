@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { ClassNames } from 'shared/lib/ClassNames/ClassNames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/ui/Input';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { loginActions } from '../../model/slice/loginSlice';
 import { getLoginState } from '../../model/selectors/getloginState/getLoginState';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
 import cls from './LoginForm.module.scss';
 
 interface LoginFormProps {
@@ -17,7 +17,9 @@ interface LoginFormProps {
 export const LoginForm = memo(({ className }: LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    const { username, password, error, isLoading } = useSelector(getLoginState);
+    const {
+        username, password, error, isLoading
+    } = useSelector(getLoginState);
 
     const onChangeUsername = useCallback(
         (value: string) => {
