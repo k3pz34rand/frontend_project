@@ -9,7 +9,6 @@ const meta: Meta<typeof NavBar> = {
     component: NavBar,
     tags: ['autodocs'],
     argTypes: {},
-    decorators: [StoreDecorator({})],
 };
 export default meta;
 
@@ -25,7 +24,7 @@ export const DarkWithoutLogin: Story = {
     args: {
         className: '',
     },
-    decorators: [ThemeDecorator(Theme.DARK)],
+    decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({})],
 };
 
 export const LigthAfterLogin: Story = {

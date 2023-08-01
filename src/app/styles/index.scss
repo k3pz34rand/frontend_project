@@ -3,14 +3,15 @@
 @import "theme/dark";
 @import "theme/ligth";
 
-body {
+.app,
+.app_modal {
   font: var(--font-m);
+  color: var(--primary-color);
 }
 
 .app {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   min-height: 100vh;
-  color: var(--primary-color);
 }
 
 .content-page {

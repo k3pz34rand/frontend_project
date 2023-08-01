@@ -22,10 +22,11 @@ export function buildPlugins({
             __IS_DEV__: JSON.stringify(isDev),
         }),
     ];
+
     if (isDev) {
+        plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
         plugins.push(new ReactRefreshWebpackPlugin());
         plugins.push(new HotModuleReplacementPlugin());
-        plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
     }
     return plugins;
 }
