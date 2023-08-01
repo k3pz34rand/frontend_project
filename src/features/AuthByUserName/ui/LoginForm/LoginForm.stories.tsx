@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { LoginForm } from './LoginForm';
 
@@ -8,6 +9,7 @@ const meta: Meta<typeof LoginForm> = {
     component: LoginForm,
     tags: ['autodocs'],
     argTypes: {},
+    decorators: [StoreDecorator({})],
 };
 export default meta;
 

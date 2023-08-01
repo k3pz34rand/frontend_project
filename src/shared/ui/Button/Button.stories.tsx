@@ -147,3 +147,12 @@ export const SquareButtonSizeXL: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const Disablet: Story = {
+    args: {
+        children: 'сохранить',
+        theme: ThemeButton.OUTLINE,
+        disabled: true,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};

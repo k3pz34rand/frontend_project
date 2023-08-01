@@ -10,5 +10,8 @@
     "Перезагрузить страницу": "Reload page",
     "сделать ошибку": "Throw error",
     "Имя пользователя": "User name",
-    "Пароль": "password"
+    "Пароль": "password",
+    "Форма авторизации": "Autorization form",
+    "Войти": "Enter",
+    "Выйти": "Exit"
 }
