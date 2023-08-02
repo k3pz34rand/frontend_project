@@ -10,7 +10,7 @@ describe('ClassNames', () => {
         expect(ClassNames('string', {}, ['cl1', 'cl2'])).toBe(expected);
     });
     test('Classname with cls, mods, additionaly', () => {
-        const expected = 'string collapsed cl1 cl2';
+        const expected = 'string cl1 cl2 collapsed';
         expect(
             ClassNames('string', { collapsed: true, disabled: false }, [
                 'cl1',
@@ -18,6 +18,7 @@ describe('ClassNames', () => {
             ])
         ).toBe(expected);
     });
+
     test('Classname with mods undefiend', () => {
         const expected = '';
         expect(ClassNames('', { collapsed: undefined, disabled: false })).toBe(
