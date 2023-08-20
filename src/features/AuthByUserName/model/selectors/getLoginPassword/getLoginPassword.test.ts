@@ -5,14 +5,16 @@ import { getLoginPassword } from './getLoginPassword';
 describe('getLoginPassword.test', () => {
     test('getLoginPassword with password', () => {
         const state: DeepPartial<StateSchema> = {
-            loginForm: { password: 'somepassword' },
+            loginForm: {
+                password: 'somepassword',
+                username: '',
+                isLoading: false,
+            },
         };
         expect(getLoginPassword(state as StateSchema)).toEqual('somepassword');
     });
     test('getLoginPassword without password', () => {
-        const state: DeepPartial<StateSchema> = {
-            loginForm: {},
-        };
+        const state: DeepPartial<StateSchema> = {};
         expect(getLoginPassword(state as StateSchema)).toEqual('');
     });
 });

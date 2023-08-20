@@ -6,24 +6,35 @@ export enum TextTheme {
     ERROR = 'error',
 }
 
+export enum TextAlign {
+    CENTER = 'center',
+    LEFT = 'left',
+    RIGTH = 'rigth',
+}
+
 interface TextProps {
     className?: string;
     title?: string;
     text?: string;
     theme?: TextTheme;
+    alignItems?: TextAlign;
 }
 
 export const Text = (props: TextProps) => {
     const {
-        className, text, title, theme = TextTheme.PRIMARY
+        className,
+        text,
+        title,
+        theme = TextTheme.PRIMARY,
+        alignItems = TextAlign.LEFT,
     } = props;
 
+    const Mods = {
+        [cls[theme]]: true,
+        [cls[alignItems]]: true,
+    };
     return (
-        <div
-            className={ClassNames(cls.Text, { [cls[theme]]: true }, [
-                className,
-            ])}
-        >
+        <div className={ClassNames(cls.Text, Mods, [className])}>
             {title && <p className={cls.title}>{title}</p>}
             {text && <p className={cls.text}>{text}</p>}
         </div>

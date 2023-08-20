@@ -33,7 +33,9 @@ export const LigthAfterLogin: Story = {
     },
     decorators: [
         ThemeDecorator(Theme.LIGTH),
-        StoreDecorator({ user: { authData: {} } }),
+        StoreDecorator({
+            user: { authData: { id: '123', username: 'username' } },
+        }),
     ],
 };
 export const DarkAfterLogin: Story = {
@@ -42,6 +44,8 @@ export const DarkAfterLogin: Story = {
     },
     decorators: [
         ThemeDecorator(Theme.DARK),
-        StoreDecorator({ user: { authData: {} } }),
+        StoreDecorator({
+            user: { authData: { id: '123', username: 'username' } },
+        }),
     ],
 };

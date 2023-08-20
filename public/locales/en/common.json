@@ -1,4 +1,6 @@
 {
-    "increment": "increment",
-    "decrement": "decrement"
+  "increment": "increment",
+  "decrement": "decrement",
+  "Укажите валюту": "Enter your currency",
+  "Укажите страну": "Enter contry"
 }
