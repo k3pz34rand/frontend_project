@@ -4,5 +4,10 @@
   "Ваше имя": "Your name",
   "Ваше фамилия": "Your lastname",
   "Сохранить": "Save",
-  "Отменить": "Cancel"
+  "Отменить": "Cancel",
+  "Серверная ошибка": "Server error",
+  "Некорректный возраст": "Incorrect age",
+  "Некорректный регион": "Incorrect region",
+  "Имя и фамилия обязательны": "Name and lastname is necessary",
+  "Данные не указаны": "Data is empty"
 }

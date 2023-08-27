@@ -85,6 +85,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                         <Avatar
                             className={cls.avatar}
                             src={data?.avatar}
+                            // eslint-disable-next-line
                             alt="user avatar"
                         />
                     </div>

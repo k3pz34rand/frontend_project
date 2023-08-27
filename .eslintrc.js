@@ -54,7 +54,7 @@ module.exports = {
             'error',
             {
                 ignoreComments: true,
-                code: 120,
+                code: 130,
             },
         ],
         'comma-dangle': ['error', 'only-multiline'],
@@ -75,5 +75,6 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
         __API__: true,
+        __PROJECT__: true,
     },
 };
